@@ -1,6 +1,17 @@
-file=open ('res2.res', 'r')
-file2=open ('ASYM.txt', 'w')
-file3=open('ini.DAt', 'r')
+import os
+
+res2_path = os.path.abspath('res2.res')
+ASYM_path = os.path.abspath('ASYM.txt')
+ini_path = os.path.abspath('ini.DAT')
+
+if os.path.exists(res2_path)==False:
+    res2_path = os.path.abspath('Asym_n_states/res2.res')
+    ASYM_path = os.path.abspath('Asym_n_states/ASYM.txt')
+    ini_path = os.path.abspath('Asym_n_states/ini.DAT')
+
+file=open (res2_path, 'r')
+file2=open (ASYM_path, 'w')
+file3=open(ini_path, 'r')
 
 str1=file3.readline()
 no, v =str1.split()

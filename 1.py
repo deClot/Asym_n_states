@@ -1,5 +1,15 @@
-file=open ('res.res', 'r')
-file2=open('res2.res','w')
+import os
+
+res_path = os.path.abspath('res.res')
+res2_path = os.path.abspath('res2.res')
+
+if os.path.exists(res_path)==False:
+    res_path = os.path.abspath('Asym_n_states/res.res')
+    res2_path = os.path.abspath('Asym_n_states/res2.res')
+
+
+file=open (res_path, 'r')
+file2=open(res2_path,'w')
 
 def func (v,v0,list1,str3,list2,no,E2):
 #    print (str3)
@@ -25,10 +35,10 @@ def func (v,v0,list1,str3,list2,no,E2):
                 file2.write('%34s\n'%(list2[i][0]))
             if len(list2[i])==3:
                 file2.write('%17s%17s\n'%(list2[i][2],list2[i][0]))
-        
+    
         list1=[]
         list2=[]
-        
+
         list1.append(str3)
         if len(str3)==7:
             k=[E2,no,str3[6]]
@@ -38,7 +48,6 @@ def func (v,v0,list1,str3,list2,no,E2):
 
 
     return v0,list1,list2
-    
 
 b=0
 list1=[]
@@ -56,7 +65,7 @@ v0=1
 #for i in range((v1**2)*6+1):
     #str1=file.readline()
 while (True):
-    str1=file.readline() 
+    str1=file.readline()
     str2=str1[0:55]
     if len(str2)==0:
        break
@@ -82,6 +91,5 @@ while (True):
 #    str2=str2.split()
 
 
-    
-
 file.close()
+file2.close()
