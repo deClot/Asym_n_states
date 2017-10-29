@@ -1,11 +1,11 @@
 import os
 
-TRANS_path = os.path.abspath('TRANS.RES')
-res_path = os.path.abspath('res.res')
+TRANS_path = os.path.abspath('Asym_n_states/TRANS.RES')
+res_path = os.path.abspath('Asym_n_states/res.res')
 
-if os.path.exists(TRANS_path)==False:
-    TRANS_path = os.path.abspath('Asym_n_states/TRANS.RES')
-    res_path = os.path.abspath('Asym_n_states/res.res')
+#if os.path.exists(TRANS_path)==False:
+#    TRANS_path = os.path.abspath('Asym_n_states/TRANS.RES')
+#    res_path = os.path.abspath('Asym_n_states/res.res')
 
 while(True):
     f=open(TRANS_path, 'r').readlines()

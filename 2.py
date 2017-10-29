@@ -9,6 +9,7 @@ if os.path.exists(res2_path)==False:
     ASYM_path = os.path.abspath('Asym_n_states/ASYM.txt')
     ini_path = os.path.abspath('Asym_n_states/ini.DAT')
 
+print (ini_path)
 file=open (res2_path, 'r')
 file2=open (ASYM_path, 'w')
 file3=open(ini_path, 'r')
